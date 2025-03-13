@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fff0f0;
+  }
+  
+  canvas {
+    display: block;
+    position: fixed; /* Fija el canvas en la ventana */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    z-index: -1; /* Coloca el canvas detrás del contenido */
+  }
+  body {
+    margin: 0;
+    font-family: cursive, Courier, monospace, sans-serif;
+    text-align: center;
+    color: #ffffff; /* Color del texto */
+    background-color: #0d0112fd; /* Fondo oscuro */
+  }
+  h1 {
+    font-size: 1.1rem; /* Tamaño de letra más pequeño */
+    margin: 0;
+  }
+  h1 {
+    margin-top: 50px; /* Aumenté el margen superior */
+    font-size: 1rem;
+  }
+  img {
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    width: 100%;
+    height: auto;
+    margin: 20px auto; /* Espaciado alrededor de la imagen */
+    display: block;
+    border: 15px solid transparent; /* Borde transparente para el marco */
+    border-radius: 20px; /* Esquinas redondeadas */
+    position: relative; /* Para posicionar pseudoelementos */
+    background: 
+      linear-gradient(45deg, #8B4513, #A0522D, #8B4513) padding-box, /* Degradado de madera */
+      linear-gradient(45deg, #5C4033, #8B4513) border-box; /* Degradado para el borde */
+    box-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.5), /* Sombra exterior */
+      inset 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra interior */
+    padding: 10px; /* Espacio entre el marco y la imagen */
+  }
+  
+  img::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%); /* Efecto de vetas de madera */
+    z-index: -1;
+    border-radius: 20px; /* Esquinas redondeadas */
+    pointer-events: none; /* Para no interferir con la imagen */
+  }
+  
+  img::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), transparent); /* Efecto de luz y sombra */
+    z-index: -1;
+    border-radius: 20px; /* Esquinas redondeadas */
+    pointer-events: none; /* Para no interferir con la imagen */
+  }
